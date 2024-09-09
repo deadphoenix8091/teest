@@ -1,6 +1,7 @@
 // edgepage/next.config.js
 
-module.exports = {
+const withTypescript = require('@zeit/next-typescript');
+module.exports = withTypescript({
   // Set the target to 'serverless' to optimize for serverless deployment
   target: 'serverless',
 
