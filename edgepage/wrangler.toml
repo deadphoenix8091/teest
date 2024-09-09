@@ -2,7 +2,7 @@ name = "edgepage-worker"
 type = "javascript"
 
 # The entry point for the Cloudflare Worker
-main = "./dist/index.js"
+main = "./lib/index.js"
 
 # Account and project settings
 account_id = "your-account-id"

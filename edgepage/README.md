@@ -47,15 +47,27 @@ npm run build
 
 This will compile the TypeScript files and create an optimized production build in the `.next` directory.
 
-### Running the Cloudflare Worker Locally
+### Running the Cloudflare Worker Locally with Hono
 
-To run the Cloudflare Worker locally, use the following command:
+To run the Cloudflare Worker locally using Hono, use the following command:
 
 ```bash
-npm run dev
+npm run build
 ```
 
-This will start the Next.js development server and the Cloudflare Worker. Open your browser and navigate to `http://localhost:3000` to view the application.
+This will compile the TypeScript files and start the Cloudflare Worker using Hono. You can then use a tool like `miniflare` to simulate the worker environment locally. Install `miniflare` globally if you haven't already:
+
+```bash
+npm install -g miniflare
+```
+
+Then, run the worker locally:
+
+```bash
+miniflare lib/index.js
+```
+
+Open your browser and navigate to `http://localhost:8787` to view the application.
 
 ## Deploying the Cloudflare Worker
 
