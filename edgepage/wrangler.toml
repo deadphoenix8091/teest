@@ -1,0 +1,14 @@
+name = "edgepage-worker"
+type = "javascript"
+
+# The entry point for the Cloudflare Worker
+main = "./dist/index.js"
+
+# Account and project settings
+account_id = "your-account-id"
+workers_dev = true
+compatibility_date = "2023-10-01"
+
+# Additional settings can be added here if needed
+# For example, specifying environment variables or KV namespaces
+

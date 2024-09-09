@@ -45,7 +45,38 @@ To build the application for production, run:
 npm run build
 ```
 
-This will create an optimized production build in the `.next` directory.
+This will compile the TypeScript files and create an optimized production build in the `.next` directory.
+
+### Running the Cloudflare Worker Locally
+
+To run the Cloudflare Worker locally, use the following command:
+
+```bash
+npm run dev
+```
+
+This will start the Next.js development server and the Cloudflare Worker. Open your browser and navigate to `http://localhost:3000` to view the application.
+
+## Deploying the Cloudflare Worker
+
+To deploy the Cloudflare Worker, follow these steps:
+
+1. Ensure you have built the project using the build command:
+   ```bash
+   npm run build
+   ```
+
+2. Ensure you are logged in to your Cloudflare account using Wrangler:
+   ```bash
+   wrangler login
+   ```
+
+3. Publish the application using Wrangler:
+   ```bash
+   wrangler publish
+   ```
+
+This command will deploy your application to Cloudflare Pages, making it accessible via your configured domain.
 
 ## Deployment
 
@@ -68,5 +99,4 @@ This command will deploy your application to Cloudflare Pages, making it accessi
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Cloudflare Pages Documentation](https://developers.cloudflare.com/pages)
 - [Wrangler CLI Documentation](https://developers.cloudflare.com/workers/cli-wrangler)
-
 
